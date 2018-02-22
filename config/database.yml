@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: textile_shop_production
+  username: textile_shop
+  password: <%= ENV['TEXTILE_SHOP_DATABASE_PASSWORD'] %>
