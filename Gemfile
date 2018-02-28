@@ -16,6 +16,8 @@ gem 'spree', '~> 3.4.4'
 gem 'spree_auth_devise', '~> 3.3'
 gem 'spree_gateway', '~> 3.3'
 
+gem 'font-awesome-sass', '~> 5.0.6'
+
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: 'master'
 
 group :development, :test do

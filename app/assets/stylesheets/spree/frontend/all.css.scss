@@ -1,0 +1,26 @@
+@import "bootstrap";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import 'settings/color-variables';
+@import 'settings/z-index-variables';
+@import 'settings/typography-variables';
+
+@import 'utilities/shared';
+@import 'utilities/typography';
+
+
+@import 'components/header';
+
+body {
+  background-color: #f6f6f6;
+}
+
+.first-block {
+  margin-top: 100px;
+
+  @media (min-width: 768px) {
+    margin-top: 50px;
+  }
+}

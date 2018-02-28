@@ -136,6 +136,8 @@ GEM
       i18n (>= 0.7)
     ffaker (2.8.1)
     ffi (1.9.21)
+    font-awesome-sass (5.0.6.2)
+      sass (>= 3.2)
     friendly_id (5.2.3)
       activerecord (>= 4.0.0)
     globalid (0.4.1)
@@ -452,6 +454,7 @@ DEPENDENCIES
   database_cleaner
   factory_bot_rails
   faker
+  font-awesome-sass (~> 5.0.6)
   hub
   jbuilder (~> 2.5)
   launchy
