@@ -12,18 +12,9 @@
     <%= render partial: 'spree/shared/trackers/segment/initializer.js' %>
     <%= render partial: 'spree/shared/header' %>
 
-    <div class="first-block container">
-      <div class="row" data-hook>
+    <%= flash_messages %>
+    <%= yield %>
 
-        <div id="content" class="col-sm-12" data-hook>
-          <%= flash_messages %>
-          <%= yield %>
-        </div>
-
-        <head data-hook="inside_head">
-          <%= render partial: 'spree/shared/footer' %>
-        </head>
-      </div>
-    </div>
+    <%= render partial: 'spree/shared/footer' %>
   </body>
 </html>

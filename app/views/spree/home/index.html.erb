@@ -1,13 +1,18 @@
 <% @body_id = 'home-page' %>
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render partial: 'spree/shared/taxonomies' %>
+
+<div class="first-block container">
+  <div class="main-banner--wrapper relative">
+    <%= image_tag "background-image.jpg", class: "main-banner--image" %>
+    <div class="main-banner--content-wrapper">
+      <div class="main-banner--content">
+        <h1 class="main-banner--header">Niechcial & Co</h1>
+        <h2 class="main-banner--subheader">Najpiękniejsze tkaniny na świecie</h2>
+        <div class="main-banner--shop-now">
+          <%= link_to root_path, class: 'main-banner--shop-now__wrapper' do %>
+            <span>Zobacz tkaniny</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<div data-hook="homepage_products">
-  <% cache(cache_key_for_products) do %>
-    <%= render partial: 'spree/shared/products', locals: { products: @products } %>
-  <% end %>
 </div>
-
