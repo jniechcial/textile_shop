@@ -1,7 +1,6 @@
 GIT
   remote: https://github.com/spree-contrib/spree_i18n.git
   revision: f252c9e0fbc16b2486753f41c69601fe0e6c5ab5
-  branch: master
   specs:
     spree_i18n (3.3.2)
       i18n_data
@@ -256,7 +255,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rails-i18n (5.1.0)
+    rails-i18n (5.1.1)
       i18n (>= 0.7, < 2)
       railties (>= 5.0, < 6)
     rails_layout (1.0.42)

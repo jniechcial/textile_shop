@@ -1,3 +1,21 @@
 .relative {
   position: relative;
 }
+
+.gray-background {
+  background-color: $light-gray;
+}
+
+.hidden-on-mobile {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.hidden-on-desktop {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

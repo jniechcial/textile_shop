@@ -1,4 +1,90 @@
 .product-view {
   max-width: 950px;
-  margin-top: 150px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+  &--title {
+    color: $main-orange;
+    margin-top: 0;
+    font-weight: 300;
+  }
+
+  &--price-title {
+    color: $main-orange;
+  }
+
+  &--price {
+    color: $main-orange;
+  }
+
+  &--description {
+    color: $main-orange;
+    font-size: 15px;
+  }
+
+  &--main-image {
+    border-color: $main-orange;
+    border-radius: 0;
+  }
+
+  &--thumbnail {
+    border-color: $main-orange;
+    border-radius: 0;
+  }
+
+  &--properties-title {
+    color: $main-orange;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  &--property-row {
+    td {
+      padding-left: 0 !important;
+      font-weight: 300;
+    }
+  }
+}
+
+.add-to-cart {
+  padding: 10px 0;
+
+  &--quantity-input {
+    display: inline;
+    margin: 10px 0 !important;
+    outline: none;
+    font-size: 14px;
+    background: $white;
+    border: 1px solid $light-gray--1;
+    padding: 0 14px;
+    color: #575757;
+    height: 43px;
+    padding-left: 25px;
+    padding-right: 10px;
+    border-radius: 0;
+    width: 70px !important;
+  }
+
+  &--quantity-unit {
+    color: $main-orange;
+    font-size: 12px;
+    padding-left: 15px;
+  }
+
+  &--add-button {
+    background-color: $main-orange;
+    color: $white;
+    border-radius: 0;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 20px 50px;
+    margin: 10px 0;
+
+    &:hover {
+      color: white !important;
+      opacity: .5;
+      transition: opacity 250ms linear;
+    }
+  }
 }

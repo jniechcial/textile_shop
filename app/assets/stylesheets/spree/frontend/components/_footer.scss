@@ -1,0 +1,10 @@
+.footer {
+  background-color: $main-dark;
+  padding: 20px 0;
+
+  &--copyright {
+    color: $main-orange;
+    text-align: center;
+    margin: 0;
+  }
+}

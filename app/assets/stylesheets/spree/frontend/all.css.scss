@@ -10,20 +10,17 @@
 @import 'utilities/shared';
 @import 'utilities/typography';
 
-
+@import 'components/breadcrumbs';
 @import 'components/header';
 @import 'components/main-banner';
+@import 'components/footer';
 
 @import 'views/product';
-
-body {
-  background-color: #f6f6f6;
-}
 
 .first-block {
   margin-top: 120px;
 
   @media (min-width: 768px) {
-    margin-top: 75px;
+    margin-top: 70px;
   }
 }
