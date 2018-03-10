@@ -506,7 +506,7 @@ pl:
     category: Kategoria
     charged: Pobrano
     check_for_spree_alerts: Sprawdź alarmy Spree
-    checkout: Złożenie zamówienia
+    checkout: Zamówienie
     choose_a_customer: Wybierz klienta
     choose_a_taxon_to_sort_products_for:
     choose_currency: Wybierz walutę
@@ -918,7 +918,7 @@ pl:
       payment: płatność
       resumed: wznowione
       returned: zwrócone
-    order_summary: Podsumowanie zamówienia
+    order_summary: Podsumowanie
     order_sure_want_to: Na pewno chcesz %{event} to zamówienie?
     order_total: Całkowita wartość zamówienia
     order_updated: Uaktualniono zamówienie
