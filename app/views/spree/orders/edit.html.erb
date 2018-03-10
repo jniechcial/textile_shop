@@ -1,61 +1,64 @@
 <% @body_id = 'cart' %>
 
-<% if @variant %>
-  <%= render partial: 'spree/shared/trackers/segment/product_added.js',
-              formats: :js,
-              locals: { product: @variant.product, order: @order } %>
-<% end %>
-<%= render partial: 'spree/shared/trackers/segment/cart_viewed.js',
-            formats: :js,
-            locals: { order: @order } %>
-<div data-hook="cart_container">
-  <h1><%= Spree.t(:shopping_cart) %></h1>
-
+<div class="container cart-view">
   <% if @order.line_items.empty? %>
     <div data-hook="empty_cart">
       <div class="alert alert-info"><%= Spree.t(:your_cart_is_empty) %></div>
       <p><%= link_to Spree.t(:continue_shopping), products_path, class: 'btn btn-default' %></p>
     </div>
   <% else %>
-    <div data-hook="outside_cart_form">
+    <div class="cart-view--wrapper">
       <%= form_for @order, url: update_cart_path, html: { id: 'update-cart' } do |order_form| %>
-        <div data-hook="inside_cart_form">
+        <div class="cart-view--header">
+          <div class="cart-view--header__long cart-view--header__title">
+            <h1>Koszyk</h1>
+          </div>
+          <div class="cart-view--header__short hidden-on-mobile">
+            Cena
+          </div>
+          <div class="cart-view--header__short hidden-on-mobile">
+            Metrów bieżących
+          </div>
+          <div class="cart-view--header__short cart-view--header__last hidden-on-mobile">
+            Razem
+          </div>
+        </div>
 
-          <div data-hook="cart_items" class="table-responsive">
-            <%= render partial: 'form', locals: { order_form: order_form } %>
+        <div data-hook="cart_items" class="table-responsive">
+          <%= render partial: 'form', locals: { order_form: order_form } %>
+        </div>
+
+        <div class="row">
+          <div class='col-md-6 cart-view--coupon-code' data-hook='coupon_code'>
+            <p class="cart-view--coupon-code-header">Wprowadź kod promocyjny</p>
+            <div class="form-inline">
+              <%= order_form.text_field :coupon_code, size: '30', class: 'form-control coupon-input' %>
+              <%= button_tag Spree.t(:coupon_code_apply), class: 'btn coupon-button' %>
+            </div>
           </div>
 
-          <div class="links col-md-3 navbar-form pull-right text-right" data-hook="cart_buttons">
+          <div class="col-md-6">
+            <div class="cart-view--total-wrapper">
+              <div class="cart-view--total-cell">
+                <%= Spree.t(:total) %>
+              </div>
+              <div class="cart-view--total-cell text-right">
+                <%= order_form.object.display_total %>
+              </div>
+            </div>
+
             <div class="form-group">
-              <%= button_tag class: 'btn btn-primary', id: 'update-button' do %>
+              <%= button_tag class: 'btn cart-view--btn cart-view--btn__white', id: 'update-button' do %>
                 <%= Spree.t(:update) %>
               <% end %>
-              <%= button_tag class: 'btn btn-lg btn-success', id: 'checkout-link', name: 'checkout' do %>
+              <%= button_tag class: 'btn cart-view--btn', id: 'checkout-link', name: 'checkout' do %>
                 <%= Spree.t(:checkout) %>
               <% end %>
             </div>
           </div>
-
-          <% if Spree::Frontend::Config[:coupon_codes_enabled] %>
-            <div class='col-md-6 form-inline pull-right' data-hook='coupon_code'>
-              <label>
-                <%= order_form.label :coupon_code %>
-                <%= order_form.text_field :coupon_code, size: '30', class: 'form-control' %>
-                <%= button_tag Spree.t(:coupon_code_apply), class: 'btn btn-default' %>
-              </label>
-            </div>
-          <% end %>
         </div>
-      <% end %>
-    </div>
 
-    <div id="empty-cart" class="col-md-3 pull-left" data-hook>
-      <%= form_tag empty_cart_path, method: :put do %>
-        <p id="clear_cart_link" data-hook>
-          <%= submit_tag Spree.t(:empty_cart), class: 'btn btn-default' %>
-          <%= Spree.t(:or) %>
-          <%= link_to Spree.t(:continue_shopping), products_path, class: 'continue' %>
-        </p>
+
       <% end %>
     </div>
   <% end %>

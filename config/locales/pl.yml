@@ -547,6 +547,7 @@ pl:
       US: Stany Zjednoczone Ameryki Północnej
     coupon: Kupon
     coupon_code: Kod kuponu
+    coupon_code_apply: Aplikuj
     coupon_code_already_applied: Do tego zamówienia wykorzystano już kod kuponu
     coupon_code_applied: Kod kuponu został zastosowany do Twojego zamówienia.
     coupon_code_better_exists: Poprzednio zastosowany kod kuponu jest korzystniejszy
