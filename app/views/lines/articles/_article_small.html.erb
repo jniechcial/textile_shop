@@ -1,0 +1,14 @@
+<div class="article <%= article_class %>">
+  <% cache "#{article_small}_small" do %>
+    <h3><span class="published_at"><%= l(article_small.published_at, format: '%-d %B %Y') %></span></h3>
+    <div class="hero_image">
+      <%= link_to article_path(article_small) do %>
+        <img src="<%= article_small.image_url %>" alt="<%= article_small.title %>" />
+      <% end %>
+    </div>
+
+    <div class="article_header">
+      <h1><%= link_to article_small.title, article_path(article_small) %></h1>
+    </div>
+  <% end %>
+</div>

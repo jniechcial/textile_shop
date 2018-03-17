@@ -1,0 +1,26 @@
+@import 'variables_and_mixins';
+@import 'article';
+@import 'pagination';
+
+@import '../spree/frontend/all';
+
+.blog {
+  &--articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.article {
+  h3 {
+    text-align: center;
+  }
+  h3 > .published_at {
+    font-size: 13px;
+    line-height: 1.5em;
+    text-align: center;
+    color: #bbb;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,10 @@
+<div id="articles" class="blog--articles">
+  <%= render partial: 'article_collection', collection: @articles %>
+</div>
+
+<% if @articles.total_pages > 1 %>
+<hr>
+<div id="pagination">
+  <%= paginate @articles, outer_window: 1, window: 2, theme: 'lines' %>
+</div>
+<% end %>
