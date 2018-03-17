@@ -8,7 +8,7 @@ CarrierWave.configure do |config|
         aws_secret_access_key: Rails.application.secrets.AWS_S3_SECRET_KEY,
         region: Rails.application.secrets.AWS_S3_REGION,
       }
-      config.fog_directory  = Rails.applcation.secrets.AWS_S3_BUCKET
+      config.fog_directory  = Rails.application.secrets.AWS_S3_BUCKET
       config.storage = :fog
 
     when 'development'
