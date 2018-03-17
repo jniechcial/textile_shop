@@ -17,6 +17,9 @@ gem 'spree_auth_devise', '~> 3.3'
 gem 'spree_gateway', '~> 3.3'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 
+gem 'fog-aws'
+gem 'aws-sdk', '~> 2.3'
+
 gem 'lines-engine'
 
 gem 'font-awesome-sass', '~> 5.0.6'
