@@ -1,13 +1,9 @@
 .article {
   max-width: $max-width;
-  font-family: $Merriweather;
+  margin: 0 auto;
+  margin-top: 50px;
   line-height: 1.5em;
   color: $black;
-
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $SourceSansPro;
-  }
 
   .article_header, .article_teaser, .article_content {
     margin: 0 auto;
@@ -29,12 +25,12 @@
       line-height: 120%;
       color: $black;
       a { color: $black; }
-      a:hover { color:$red; }
+      a:hover { color:$main-orange; }
     }
     h2 {
       font-size: 1.5em;
       font-weight: 400;
-      color: $grey;
+      color: $main-dark;
       line-height: 120%;
     }
     .author_name {
@@ -64,7 +60,6 @@
     display: block;
     margin: 0 auto 2em auto;
     text-align: center;
-    font-family: $SourceSansPro;
     a {
       margin: 0;
       font-weight: 600;
@@ -84,10 +79,11 @@
 
   .article_content {
     line-height: 1.9em;
+    font-weight: 300;
 
     a {
-      border-bottom: 1px solid $grey;
-      &:hover { color: $red; border-bottom: 1px solid $red; }
+      border-bottom: 1px solid $main-dark;
+      &:hover { color: $main-orange; border-bottom: 1px solid $main-orange; }
     }
 
     h1, h2, h3, h4, h5, h6 { margin-top: 1.8em; line-height: 120%; color: $black }
@@ -98,23 +94,24 @@
     h2 { font-size: 2.0em;}
     h3 {
       font-size: 1.5em;
-      color: $red;
+      color: $main-orange;
       margin-bottom: 1.0em;
-      a { color: $red; }
+      a { color: $main-orange; }
       a:hover { color: $black; border-bottom: 1px solid $black; }
     }
     h4 { font-size: 1.25em; text-transform: uppercase;  }
     h5 { font-size: 1.25em; }
     h6 {
-      font-size: 1.25em; color: $grey;
-      a { color: $grey; }
+      font-size: 1.25em; color: $main-dark;
+      a { color: $main-dark; }
     }
 
     p {
-      font-size: 1.125em;
+      font-size: 2em;
       display: block;
+      letter-spacing: 1px;
       a { color: $black; }
-      a:hover { color: $red; }
+      a:hover { color: $main-orange; }
     }
 
 
@@ -136,7 +133,7 @@
           top: 0.03em;
           left: 0;
           content: '\2022 ';
-          color: $grey;
+          color: $main-dark;
           font-size: 2em;
           position: absolute;
         }
@@ -153,7 +150,6 @@
           top: 0;
           left: 0;
           font-size: 1.125rem;
-          font-family: $SourceSansPro;
           font-weight: 600;
         }
       }
@@ -184,7 +180,6 @@
     }
 
     blockquote {
-      font-family: $Merriweather;
       font-style: italic;
       font-size: 1.5em;
       line-height: 1.5em;
@@ -195,7 +190,7 @@
     }
 
     blockquote strong:last-child, img + br + strong {
-      em { font-family: $SourceSansPro; font-style: normal; font-weight: normal; font-size: 1.0rem; color: $black; }
+    em {  font-style: normal; font-weight: normal; font-size: 1.0rem; color: $black; }
     }
 
     img + br + strong em {
@@ -203,12 +198,12 @@
     }
 
     pre {
-      border-left: 2px solid $grey;
+      border-left: 2px solid $main-dark;
       font-family: $Monospace;
       font-weight: 400;
       font-size: 1.25em;
       line-height: 140%;
-      color: $grey;
+      color: $main-dark;
       padding: 0 20px;
     }
 
@@ -221,8 +216,7 @@
       border-spacing: 0;
       border-collapse: collapse;
       th, td {
-        border: 1px solid $grey;
-        font-family: $SourceSansPro;
+        border: 1px solid $main-dark;
         line-height: 120%;
         font-size: 1.25em;
         color: $black;
@@ -238,11 +232,10 @@
         text-align: center;
         background-color: $black;
         color: $white;
-        font-family: $SourceSansPro;
         font-size: 1.25rem;
         font-weight: 600;
         line-height: 3rem;
-        &:hover { background-color: $red; }
+        &:hover { background-color: $main-orange; }
       }
     }
   }
@@ -250,8 +243,7 @@
   .article_footer {
     margin: 4em 13%;
     line-height: 130%;
-    font-family: $SourceSansPro;
-    color: $grey;
+    color: $main-dark;
     text-align: left;
     a {
       font-weight: 600;
@@ -261,7 +253,6 @@
 
   .article_googleplus {
     text-align: center;
-    font-family: $SourceSansPro;
     margin-top: $gutter-gamma;
     a {
       margin: 0 auto;
@@ -278,10 +269,10 @@
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        background: url('/assets/gplus.svg') $red center center no-repeat;
+        background: url('/assets/gplus.svg') $main-orange center center no-repeat;
         background-size: 80% auto;
       }
-      &:hover { color: lighten($grey, 10%); }
+      &:hover { color: lighten($main-dark, 10%); }
     }
   }
 

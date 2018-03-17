@@ -13,7 +13,7 @@
   <div class="article_header">
     <h1><%= link_to article.title, article_path(article) %></h1>
     <h2><%= article.sub_title %></h2>
-    <div class="author_name"><span>by</span> <%= display_article_authors(article) %></div>
+    <div class="author_name"><%= display_article_authors(article) %></div>
   </div>
 
   <div class="article_teaser">
@@ -29,17 +29,11 @@
     <% end %>
   </div>
 
-  <% unless article.gplus_url.blank? %>
-    <div class="article_googleplus">
-      <a href="<%= article.gplus_url %>">Discuss this article at Google+</a>
-    </div>
-  <% end %>
-  
   <hr>
 
   <div class="article_footer">
-    Written on <span class="published_at"><%= article.published_at.to_date %></span> by <%= display_article_authors(article, true) %>
+    Napisane <span class="published_at"><%= l(article.published_at, format: '%-d %B %Y') %></span> przez <%= display_article_authors(article, true) %>
   </div>
-  
+
 <% end %>
 </div>
