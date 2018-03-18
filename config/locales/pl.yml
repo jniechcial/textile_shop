@@ -1287,6 +1287,8 @@ pl:
       match_any:
     taxonomies: Taksonomie
     taxonomy: Taksonomia
+    taxonomy_brands_name: Marki
+    taxonomy_categories_name: Kategorie
     taxonomy_edit: Edycja taksonomii
     taxonomy_tree_error: "Żądana zmiana nie została zaakceptowana i drzewo wróciło do poprzedniego stanu, spróbuj ponownie."
     taxonomy_tree_instruction: "* Menu dla dodawania, usuwania lub sortowania dziecka dostępne jest pod prawym przyciskiem myszy."
