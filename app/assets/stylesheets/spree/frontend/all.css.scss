@@ -14,9 +14,13 @@
 @import 'components/header';
 @import 'components/main-banner';
 @import 'components/footer';
+@import 'components/list-group';
+@import 'components/panel';
+@import 'components/taxonomies';
 
 @import 'views/main';
 @import 'views/product';
+@import 'views/products';
 @import 'views/cart-view';
 @import 'views/checkout';
 

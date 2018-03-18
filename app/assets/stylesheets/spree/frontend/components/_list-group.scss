@@ -1,0 +1,27 @@
+.list-group {
+
+}
+
+a.list-group-item {
+  color: $main-orange;
+
+  &:hover, &:focus, &.active, &.active:hover, &.active:focus {
+    background-color: $light-orange;
+    color: $white;
+    border-color: $main-orange;
+  }
+}
+
+.list-group-item {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: $main-orange;
+
+  &:last-child, &:first-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
