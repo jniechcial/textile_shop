@@ -22,7 +22,11 @@ gem 'aws-sdk', '~> 2.3'
 
 gem 'lines-engine'
 
+gem 'mail_form'
+
 gem 'font-awesome-sass', '~> 5.0.6'
+
+gem "intercom-rails"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -37,7 +41,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener'
 end
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil

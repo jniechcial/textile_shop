@@ -1,0 +1,50 @@
+.contact-form-wrapper {
+  background-image: image-url('contact-form-background.jpg');
+  background-size: cover;
+  display: flex;
+  background-position: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  padding: 50px;
+
+  @media (min-width: 768px) {
+    padding: 100px 50px;
+  }
+}
+
+#contact {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 700px;
+  }
+
+  .form-inline {
+    margin-bottom: 10px;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+
+    .form-group {
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: 50%;
+
+        &:first-child {
+          padding-right: 5px;
+        }
+
+        &:last-child {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
+  .form-control {
+    width: 100%;
+  }
+}
