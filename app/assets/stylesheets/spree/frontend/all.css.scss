@@ -20,12 +20,15 @@
 @import 'components/buttons';
 @import 'components/taxonomies';
 @import 'components/contact-form';
+@import 'components/pagination';
+
 
 @import 'views/main';
 @import 'views/product';
 @import 'views/products';
 @import 'views/cart-view';
 @import 'views/checkout';
+@import 'views/registration-view';
 
 .first-block {
   margin-top: 120px;
