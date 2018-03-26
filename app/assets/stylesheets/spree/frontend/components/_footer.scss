@@ -1,10 +1,18 @@
 .footer {
   background-color: $main-dark;
-  padding: 20px 0;
+  padding: 50px 0 20px 0;
 
   &--copyright {
     color: $main-orange;
     text-align: center;
     margin: 0;
+  }
+
+  &--link {
+    text-align: center;
+
+    &, a {
+      color: #B97F6D;
+    }
   }
 }

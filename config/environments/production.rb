@@ -21,6 +21,11 @@ Rails.application.configure do
 
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: Rails.application.secrets.mailgun_api_key,
+    domain: 'damp-meadow-55266.herokuapp.com',
+  }
 
 
   config.i18n.fallbacks = true

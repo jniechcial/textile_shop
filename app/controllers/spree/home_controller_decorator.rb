@@ -1,12 +1,12 @@
 Spree::HomeController.class_eval do
   def index
+    @gray_background = true
     @contact = ContactForm.new(params[:home])
   end
 
   def contact_us
     @contact = ContactForm.new(params[:home])
     @contact.request = request
-    binding.pry
     respond_to do |format|
       if @contact.deliver
         @contact = ContactForm.new

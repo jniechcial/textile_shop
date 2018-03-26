@@ -9,7 +9,7 @@
   color: $white;
   border-color: $main-orange;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: $light-orange;
     border-color: $light-orange;
   }

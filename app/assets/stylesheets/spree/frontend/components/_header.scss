@@ -91,9 +91,14 @@
 
       &:hover {
         background: transparent !important;
+        text-decoration: underline;
       }
     }
   }
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background: transparent !important;
 }
 
 .navbar-toggle {
